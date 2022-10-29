@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import CommonCrypto
 
-extension UIView {
+public extension UIView {
     var currVC : UIViewController?{
         for view in sequence(first: superview, next: { $0?.superview}) {
             if let responder = view?.next , responder.isKind(of: UIViewController.self) {
@@ -21,7 +21,7 @@ extension UIView {
     }
 }
 
-extension UITableViewCell {
+public extension UITableViewCell {
     private func _tableView() ->UITableView?{
         if let tableView = self.superview as? UITableView {
             return tableView
@@ -100,7 +100,7 @@ extension UITableViewCell {
     
     
 }
-extension Array where Element : Equatable {
+public extension Array where Element : Equatable {
     
     mutating func remove(_ value: Element) {
         if let index = firstIndex(of: value) {
@@ -220,7 +220,7 @@ public extension UICollectionView {
 //    }
 }
 
-extension String {
+public extension String {
     var image : UIImage?{
         return UIImage(named: self)
     }
@@ -262,7 +262,7 @@ extension String {
     }
 }
 
-extension UIScrollView {
+public extension UIScrollView {
     //截屏
     func snapshotScreen()-> UIImage{
         UIGraphicsBeginImageContextWithOptions(self.contentSize, false, UIScreen.main.scale)
@@ -301,7 +301,7 @@ extension UIScrollView {
 }
 
 
-extension UIApplication {
+public extension UIApplication {
     
     
     /// 获取状态栏高度
@@ -340,7 +340,7 @@ extension UIApplication {
         }
     }
 }
-extension String {
+public extension String {
     var md5: String {
         get {
             let ccharArray = self.cString(using: String.Encoding.utf8)
@@ -353,7 +353,7 @@ extension String {
 
 
 // MARK: - 字符串截取
-extension String {
+public extension String {
     /// String使用下标截取字符串
     /// string[index] 例如："abcdefg"[3] // c
     subscript (i:Int)->String{
