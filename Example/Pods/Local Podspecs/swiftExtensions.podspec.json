@@ -1,0 +1,22 @@
+{
+  "name": "swiftExtensions",
+  "version": "0.1.0",
+  "summary": "A short description of swiftExtensions.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/luhua100/swiftExtensions",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "luhua100": "luhua2245@163.com"
+  },
+  "source": {
+    "git": "https://github.com/luhua100/swiftExtensions.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "swiftExtensions/Classes/**/*"
+}
